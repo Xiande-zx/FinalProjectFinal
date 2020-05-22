@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Inmunes</string>
+
+    <!-- ACTIVITY_MAIN-->
+    <string name="button24">Registrate</string>
+    <string name="button25">Inicia Sesion</string>
+    <string name="textview31">Inm</string>
+    <string name="textview32">unes</string>
+
+    <!-- ACTIVITY_USUARIO_REGISTRAR-->
+    <string name="textview33">Registrar Usuario</string>
+    <string name="textview34">Nombre:</string>
+    <string name="textview35">Apellido:</string>
+    <string name="textview36">Telefono:</string>
+    <string name="textview37">Edad:</string>
+    <string name="textview38">Poblacion:</string>
+    <string name="textview39">Email:</string>
+    <string name="textview40">Sexo:</string>
+    <string name="checkbox">Inmune</string>
+    <string name="button2">Registrar</string>
+
+    <!-- ACTIVITY_EMPRESA_REGISTRAR-->
+    <string name="textview41">Registrar Empresa</string>
+    <string name="textview42">Nombre:</string>
+    <string name="textview43">Telefono:</string>
+    <string name="textview44">Email:</string>
+    <string name="textview45">Direccion:</string>
+    <string name="button10">Registrar</string>
+
+    <!-- ACTIVITY_USUARIO_SERVICIO_OFERTA-->
+    <string name="button4">Usuario</string>
+    <string name="textview">Bienvenido Usuario</string>
+    <string name="textview3">Ofertas</string>
+    <string name="textView4">Resultados encontrados</string>
+    <string name="editText2">Busqueda</string>
+
+    <!-- ACTIVITY_USUARIO_DETALLE_SERVICIO-->
+    <string name="textview5">Datos Servicio</string>
+    <string name="textview6">Estado:</string>
+    <string name="textview8">Tipo:</string>
+    <string name="textview9">Descripcion:</string>
+    <string name="textview10">Inmune:</string>
+    <string name="button8">Contactar</string>
+
+    <!-- ACTIVITY_USUARIO_DETALLE_SERVICIO-->
+    <string name="textview11">Nombre:</string>
+    <string name="textview12">Telefono:</string>
+    <string name="textview13">Email:</string>
+    <string name="textview14">Direccion:</string>
+
+    <!-- ACTIVITY_USUARIO_DETALLE_SERVICIO-->
+    <string name="edittext9">Introduzca su email</string>
+    <string name="edittext10">Introduzca su telefono</string>
+    <string name="button">Ver Servicios</string>
+
+    <!-- ACTIVITY_USUARIO_DETALLE-->
+    <string name="textview46">Inmune:</string>
+    <string name="button3">Modificar</string>
+    <string name="button5">Empresa</string>
+    <string name="button9">Ver Servicios</string>
+
+
+    <!-- ACTIVITY_EMPRESA_CREAR_SERVICIOS-->
+    <string name="textview48">Tipo:</string>
+    <string name="textview49">Descripcion:</string>
+    <string name="textview50">Inmune:</string>
+    <string name="textview51">Estado:</string>
+    <string name="button7">Detalle Servicio</string>
+
+    <!-- ACTIVITY_EMPRESA_DETALLE_SERVICIOS-->
+    <string name="button11">Modificar</string>
+
+    <!-- ACTIVITY_EMPRESA_DETALLE_SERVICIOS-->
+    <string name="button6">ver Listado Servicios</string>
+
+
+</resources>
