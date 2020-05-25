@@ -3,15 +3,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.finalfinalpro.UserAdapter.EmpAdapter;
+import com.example.finalfinalpro.UserAdapter.USAdapter;
 import com.example.finalfinalpro.clase.Emp;
 
 
+import com.example.finalfinalpro.clase.Service;
 import com.google.gson.Gson;
 
 import java.io.InputStream;
@@ -23,11 +28,14 @@ public class EmpresasLista extends AppCompatActivity {
     Button verDetalleUsuario;
     ListView listView;
 
+    EditText buscador;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empresas_lista);
         verDetalleUsuario=(Button)findViewById(R.id.button3);
+        buscador=findViewById(R.id.editText2);
 
         listView=findViewById(R.id.listEmp);
 
@@ -66,6 +74,32 @@ public class EmpresasLista extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), UsuarioDetalle.class);
                 startActivity(intent);
+            }
+        });
+
+        buscador.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                ArrayList<Emp> list1 = new ArrayList<>();
+                for (int i = 0; i<list.size();i++){
+                    if (list.get(i).getName().contains(s.toString())){
+                        list1.add(list.get(i));
+                    }
+                }
+
+                final EmpAdapter EmpAdapter1 = new EmpAdapter(EmpresasLista.this, list1);
+
+                listView.setAdapter(EmpAdapter1);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
         });
     }

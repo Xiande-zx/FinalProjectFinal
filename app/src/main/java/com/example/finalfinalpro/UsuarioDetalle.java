@@ -15,7 +15,7 @@ import com.google.gson.Gson;
 
 public class UsuarioDetalle extends AppCompatActivity {
 
-    Button modificar, verServicios;
+    Button modificar, verServicios,logOut;
 
     TextView name;
     TextView surname;
@@ -33,6 +33,7 @@ public class UsuarioDetalle extends AppCompatActivity {
 
         modificar =(Button)findViewById(R.id.button28_3);
         verServicios =(Button)findViewById(R.id.button_9);
+        logOut = findViewById(R.id.logOut);
 
         Intent myIntent = getIntent();
         getIntent().getSerializableExtra("userJson");
@@ -66,6 +67,7 @@ public class UsuarioDetalle extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), UsuarioRegistrar.class);
+                intent.putExtra("userJson",userStr);
                 startActivity(intent);
             }
         });
@@ -75,6 +77,14 @@ public class UsuarioDetalle extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), UsuarioServicios.class);
                 intent.putExtra("userJson", userStr);
+                startActivity(intent);
+            }
+        });
+
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

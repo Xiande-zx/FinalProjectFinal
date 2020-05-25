@@ -6,12 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import com.example.finalfinalpro.clase.Service;
 import com.example.finalfinalpro.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class USAdapter extends BaseAdapter {
 
@@ -36,6 +39,8 @@ public class USAdapter extends BaseAdapter {
         TextView name = miVista.findViewById(R.id.ServiceName);
         name.setText(service.getType());
 
+        TextView des = miVista.findViewById(R.id.ServiceDes);
+        des.setText(service.getDescription());
 
         return miVista;
     }

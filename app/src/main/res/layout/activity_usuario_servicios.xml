@@ -6,63 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".UsuarioServicios">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="65dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="328dp"
-        android:layout_marginLeft="328dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btn_dos_ripple"
-        android:drawableBottom="@drawable/user4"
-        android:textColor="#17202A"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4_"
-        android:layout_width="203dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="188dp"
-        android:layout_marginLeft="188dp"
-        android:text="@string/textView4"
-        android:textSize="18sp"
-        android:textStyle="bold"
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"
+        android:layout_width="411dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lista" />
-
-    <ListView
-        android:id="@+id/lista"
-        android:layout_width="381dp"
-        android:layout_height="353dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Rpassword" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/Rpassword"
+        android:id="@+id/buscador"
         android:layout_width="377dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_height="46dp"
         android:background="@drawable/edittextredondos"
         android:drawableLeft="@android:drawable/ic_search_category_default"
         android:ems="10"
         android:hint="@string/editText2"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/include"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="401dp"
+        android:layout_height="583dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buscador"
+        app:layout_constraintVertical_bias="0.177" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/button5"
         app:layout_constraintStart_toStartOf="parent"

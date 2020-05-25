@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.finalfinalpro.clase.User;
 import com.example.finalfinalpro.R;
+import com.google.gson.Gson;
 
 public class UsuarioRegistrar extends AppCompatActivity {
 
@@ -51,6 +52,21 @@ public class UsuarioRegistrar extends AppCompatActivity {
         Rage=findViewById(R.id.Rage);
         Rpoblation=findViewById(R.id.Remail);
         Remail=findViewById(R.id.Remail);
+
+        Intent intent = getIntent();
+        if(intent!=null){
+            getIntent().getSerializableExtra("userJson");
+            Gson gson = new Gson();
+            final User user = gson.fromJson(getIntent().getStringExtra("userJson"), User.class);
+            Rname.setText(user.getName());
+            Rsurname.setText(user.getSurname());
+            RuserName.setText(user.getUserName());
+            Rpassword.setText(user.getPoblation());
+            Rphone.setText(user.getTelefono());
+            Rage.setText(String.valueOf(user.getAge()));
+            Rpoblation.setText(user.getPoblation());
+            Remail.setText(user.getEmail());
+        }
 
         detalleUsuario = (Button)findViewById(R.id.button2);
 

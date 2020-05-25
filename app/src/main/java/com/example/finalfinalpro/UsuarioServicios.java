@@ -4,34 +4,49 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toolbar;
 
 import com.example.finalfinalpro.UserAdapter.USAdapter;
 import com.example.finalfinalpro.clase.Service;
 import com.example.finalfinalpro.clase.User;
-import com.example.finalfinalpro.R;
 import com.google.gson.Gson;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class UsuarioServicios extends AppCompatActivity {
 
-    Button detalleUsuario, empresaServicios;
+    Button empresaServicios;
+
+    ImageButton detalleUsuario;
 
     private ListView listView;
+    ArrayList<Service> list;
+    USAdapter usAdapter;
+
+    EditText search;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario_servicios);
 
-        detalleUsuario =(Button)findViewById(R.id.button4);
+
+        detalleUsuario =findViewById(R.id.toolbar_overflow_menu_button);
         empresaServicios =(Button)findViewById(R.id.button5);
+        search=findViewById(R.id.buscador);
         listView=findViewById(R.id.lista);
 
         Intent myIntent = getIntent();
@@ -69,11 +84,39 @@ public class UsuarioServicios extends AppCompatActivity {
             json  = new String(buffer);
         } catch (Exception e) { }
 
-        final ArrayList<Service> list  = new ArrayList<Service>(Arrays.asList(new Gson().fromJson(json, Service[].class)));
+        list  = new ArrayList<Service>(Arrays.asList(new Gson().fromJson(json, Service[].class)));
 
-        USAdapter usAdapter = new USAdapter(this,list);
+        usAdapter = new USAdapter(this, list);
 
         listView.setAdapter(usAdapter);
+
+        final String finalJson = json;
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                ArrayList<Service> list1 = new ArrayList<>();
+                for (int i = 0; i<list.size();i++){
+                    if (list.get(i).getType().toLowerCase().contains(s.toString().toLowerCase())){
+                        list1.add(list.get(i));
+                    }
+                }
+
+                final USAdapter usAdapter1 = new USAdapter(UsuarioServicios.this, list1);
+
+                listView.setAdapter(usAdapter1);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -89,7 +132,6 @@ public class UsuarioServicios extends AppCompatActivity {
 
             }
         });
-
 
     }
 }

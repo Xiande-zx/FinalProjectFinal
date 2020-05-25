@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.finalfinalpro.clase.User;
-import com.example.finalfinalpro.R;
 import com.google.gson.Gson;
 
 import java.io.InputStream;
@@ -30,6 +29,7 @@ public class UsuarioLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario_login);
+        /*
         verServicios= (Button) findViewById(R.id.button);
         verServicios.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +97,7 @@ public class UsuarioLogin extends AppCompatActivity {
             }
         });
     }
-
+*//*
     public void error(String str){
         Context context = getApplicationContext();
         CharSequence text = "El camp "+str+" no pot estar buit!";
@@ -106,5 +106,6 @@ public class UsuarioLogin extends AppCompatActivity {
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
-
+*/
+    }
 }
