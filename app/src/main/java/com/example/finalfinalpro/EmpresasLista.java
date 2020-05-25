@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.finalfinalpro.UserAdapter.EmpAdapter;
@@ -25,7 +26,7 @@ import java.util.Arrays;
 
 public class EmpresasLista extends AppCompatActivity {
 
-    Button verDetalleUsuario;
+    ImageButton verDetalleUsuario;
     ListView listView;
 
     EditText buscador;
@@ -34,7 +35,7 @@ public class EmpresasLista extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empresas_lista);
-        verDetalleUsuario=(Button)findViewById(R.id.button3);
+        //verDetalleUsuario=findViewById(R.id.toolbar_overflow_menu_button);
         buscador=findViewById(R.id.editText2);
 
         listView=findViewById(R.id.listEmp);
@@ -68,7 +69,7 @@ public class EmpresasLista extends AppCompatActivity {
 
             }
         });
-
+/*
         verDetalleUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +77,7 @@ public class EmpresasLista extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+*/
         buscador.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

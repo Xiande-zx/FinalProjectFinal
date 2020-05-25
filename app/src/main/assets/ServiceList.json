@@ -9,5 +9,35 @@
   "type" : "Cajero",
   "description" : "Mercandona requiere cajero",
   "idEmp" : 10
-  }
+  },{
+  "id" : 6,
+  "type" : "Cajero",
+  "description" : "Mercandona requiere cajero",
+  "idEmp" : 15
+},{
+  "id" : 7,
+  "type" : "Cajero",
+  "description" : "Mercandona requiere cajero",
+  "idEmp" : 10
+},{
+  "id" : 8,
+  "type" : "Cajero",
+  "description" : "Mercandona requiere cajero",
+  "idEmp" : 15
+},{
+  "id" : 9,
+  "type" : "Cajero",
+  "description" : "Mercandona requiere cajero",
+  "idEmp" : 10
+},{
+  "id" : 10,
+  "type" : "Cajero",
+  "description" : "Mercandona requiere cajero",
+  "idEmp" : 10
+},{
+  "id" : 11,
+  "type" : "Cajero",
+  "description" : "Mercandona requiere cajero",
+  "idEmp" : 10
+}
 ]

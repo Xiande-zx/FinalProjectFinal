@@ -7,37 +7,24 @@
     android:weightSum="100"
     tools:context=".UserAdapter.USAdapter">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="71dp"
-        android:layout_height="74dp"
-        android:layout_weight="66.6"
-        android:src="@drawable/botoncircular"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.013" />
-
     <TextView
         android:id="@+id/ServiceDes"
-        android:layout_width="296dp"
-        android:layout_height="45dp"
+        android:layout_width="371dp"
+        android:layout_height="27dp"
         android:layout_below="@+id/ServiceName"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/ServiceName" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ServiceName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/ServiceName"
-        android:layout_width="298dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_width="373dp"
+        android:layout_height="24dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="8dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

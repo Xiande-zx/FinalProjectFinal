@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UsuarioServicios">
-
+    tools:context=".UsuarioServicios"
+    >
 
     <include
         android:id="@+id/include"
         layout="@layout/toolbar"
         android:layout_width="411dp"
-        android:layout_height="40dp"
+        android:layout_height="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -21,6 +21,7 @@
 
     <EditText
         android:id="@+id/buscador"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="377dp"
         android:layout_height="46dp"
         android:background="@drawable/edittextredondos"
@@ -28,17 +29,18 @@
         android:ems="10"
         android:hint="@string/editText2"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/include"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <ListView
         android:id="@+id/lista"
         android:layout_width="401dp"
-        android:layout_height="583dp"
+        android:layout_height="553dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="5dp"
         android:focusableInTouchMode="false"
@@ -47,17 +49,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buscador"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintVertical_bias="0.177"
+        />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
         android:text="@string/button5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

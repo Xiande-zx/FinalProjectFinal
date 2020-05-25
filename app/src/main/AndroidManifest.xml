@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.finalfinalpro.UserAdapter.EmpAdapter"></activity>
+        <activity android:name=".UserAdapter.EmpAdapter" />
         <activity android:name=".EmpresasLista" />
         <activity android:name=".EmpresaServiciosLista" />
         <activity android:name=".UsuarioDetalle" />
